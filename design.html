@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Diagram</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1d2b64;
+            margin: 0;
+        }
+        .margin {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            position: relative;
+            
+        }
+        .border {
+            background-color: orange;
+            padding: 25px;
+        }
+        .padding {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        .labels {
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .top { top: -30px; left: 50%; transform: translateX(-50%); }
+        .bottom { bottom: -30px; left: 50%; transform: translateX(-50%); }
+        .left { left: -60px; top: 50%; transform: translateY(-50%); }
+        .right { right: -60px; top: 50%; transform: translateY(-50%); }
+    </style>
+</head>
+<body>
+    <div class="margin">
+        <div class="labels top">TOP</div>
+        
+        <div class="labels bottom">BOTTOM</div>
+        <div class="labels left">LEFT</div>
+        <div class="labels right">RIGHT</div>
+        <div class="border">
+            <div class="padding">
+                <div class="content">CONTENT</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
