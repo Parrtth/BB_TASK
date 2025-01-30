@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beats 3 Product Page</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header nav a {
+  margin: 0 15px;
+  font-weight: bold;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.header nav a.active,
+.header nav a:hover {
+  color: #fff;
+}
+
+.product-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid #333;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  max-width: 500px;
+}
+
+.product-details h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #121212;
+  color: #f9f3f3;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.icons img {
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+.specs-section,
+.case-section,
+.style-section {
+  padding: 50px 0;
+  border-bottom: 1px solid #333;
+  
+}
+
+.specs-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.specs-section li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.specs-section img,
+.case-section img {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 60%;
+}
+
+.style-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.style-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.style-card:hover {
+  transform: translateY(-5px);
+}
+
+.style-card img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+}
+
+.footer div {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.footer input[type="email"] {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer .button {
+  width: auto;
+  padding: 8px 20px;
+}
+
+     
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h2>Beats</h2>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Specs</a>
+      <a href="#">Case</a>
+      <a href="#">Products</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="product-section">
+      <div class="product-image">
+        <img src="Assets/home.png" alt="Beats Studio 3">
+      </div>
+      <div class="product-details">
+        <h1>On ear</h1>
+        <h1>Beats 3</h1>
+        <p>Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.</p>
+        <button class="button">Add to Bag - $299</button>
+      </div>
+    </section>
+
+    <section class="icons">
+      <img src="Assets/sponsor1.png" alt="Apple">
+      <img src="Assets/sponsor2.png" alt="Spotify">
+      <img src="Assets/sponsor3.png" alt="Amazon">
+      <img src="Assets/sponsor4.png" alt="YouTube">
+    </section>
+
+    <section class="specs-section">
+      <h2>Specs</h2>
+      <ul>
+        <li>Connection: Bluetooth v5.0</li>
+        <li>Battery: Duration 40h</li>
+        <li>Lead: Fast charge 4.2 AAC</li>
+        <li>Microphone: Supports Apple Siri and Google</li>
+      </ul>
+      <img src="Assets/specs.png" alt="Specs Image">
+    </section>
+
+    <section class="case-section">
+      <h2>Case</h2>
+      <img src="Assets/case.png" alt="case-section">
+      <p>With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
+      <button class="button">More Info</button>
+    </section>
+
+    <section class="style-section">
+      <h2>Choose Your Style</h2>
+      <div class="style-options">
+        <div class="style-card">
+          <img src="Assets/product1.png" alt="Black">
+          <p>Black - $249</p>
+        </div>
+        <div class="style-card">
+          <img src="Assets/product2.png" alt="Red">
+          <p>Red - $249</p>
+        </div>
+        <div class="style-card">
+          <img src="Assets/product3.png" alt="Night Black">
+          <p>Night Black - $254</p>
+        </div>
+        <div class="style-card">
+          <img src="Assets/product4.png" alt="Blue">
+          <p>Blue - $249</p>
+        </div>
+        <div class="style-card">
+          <img src="Assets/product5.png" alt="Twilight Gray">
+          <p>Twilight Gray - $249</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <img src="Assets/logo.png" alt="logo">
+      <h4>Products</h4>
+      <p>Headphones</p>
+      <p>Earphones</p>
+      <p>Earbuds</p>
+      <p>Accessories</p>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <p>Product Help</p>
+      <p>Register</p>
+      <p>Updates</p>
+      <p>Provides</p>
+    </div>
+    <div>
+      <h4>Subscribe</h4>
+      <input type="email" placeholder="Email">
+      <button class="button">Submit</button>
+    </div>
+  </footer>
+</body>
+</html> */
