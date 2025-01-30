@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+        .container {
+            width: 450px;
+           
+        }
+        
+        
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            border: 2px solid transparent;
+        }
+        .link .icon {
+            font-weight: bold;
+            margin-right: 20px;
+            
+        }
+        .blue { background: #e3f2fd; border-color: #42a5f5; }
+        .red { background: #ffcdd2; border-color: #e57373; }
+        .green { background: #c8e6c9; border-color: #66bb6a; }
+        .yellow { background: #fff9c4; border-color: #fbc02d; }
+        .purple { background: #e1bee7; border-color: #ab47bc; }
+        .orange { background: #ffccbc; border-color: #ff7043; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="link blue"> <span class="icon">✖</span> This is a link without a link </div>
+        <div class="link red"> <span class="icon">✖</span> This is a link without a link with target blank </div>
+        <a href="#" class="link green"> <span class="icon">✔</span> This is a link with a link with target blank and noopener </a>
+        <a href="#" class="link green"> <span class="icon">✔</span> This is a default link </a>
+        <a href="#" class="link yellow"> <span class="icon">✔</span> This is an internal link </a>
+        <a href="#" class="link blue"> <span class="icon">✔</span> This is external </a>
+        <a href="#" target="_blank" class="link orange"> <span class="icon">✖</span> External link without noopener with target blank </a>
+        <a href="#" target="_blank" rel="noopener" class="link purple"> <span class="icon">✔</span> External in new window like it should be </a>
+    </div>
+</body>
+</html>
