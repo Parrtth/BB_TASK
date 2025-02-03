@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Gradient Table Example</title>
+  <style>
+    /* Body styles: add a gradient background */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Adjust these colors to match your desired gradient */
+      background: linear-gradient(to right, #6c9fc9, #8268a2);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Table container for optional centering and spacing */
+    .table-container {
+      width: 80%;
+      margin: 50px auto;
+      /* Centers the table on the page */
+      overflow-x: auto;
+      /* Allows horizontal scroll if needed */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #ffffff;
+      /* Table text color */
+      min-width: 600px;
+      /* Helps keep columns from shrinking too much */
+    }
+
+    /* Table header */
+    thead th {
+      background-color: rgba(53, 48, 72, 0.625);
+      text-align: left;
+      padding: 12px;
+    }
+
+    /* Table cells */
+    tbody td {
+      padding: 12px;
+      /* Optional border or you can remove it */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Alternate row coloring to replicate the striped effect */
+    tbody tr:nth-child(odd) {
+      background-color: rgba(255, 255, 255, 0.07);
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+          <th>Column 4</th>
+          <th>Column 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cart 1</td>
+          <td>Cart 2</td>
+          <td>Cart 3</td>
+          <td>Cart 4</td>
+          <td>Cart 5</td>
+        </tr>
+        <tr>
+          <td>Cart 1</td>
+          <td>Cart 2</td>
+          <td>Cart 3</td>
+          <td>Cart 4</td>
+          <td>Cart 5</td>
+        </tr>
+        <tr>
+          <td>Cart 1</td>
+          <td>Cart 2</td>
+          <td>Cart 3</td>
+          <td>Cart 4</td>
+          <td>Cart 5</td>
+        </tr>
+        <tr>
+          <td>Cart 1</td>
+          <td>Cart 2</td>
+          <td>Cart 3</td>
+          <td>Cart 4</td>
+          <td>Cart 5</td>
+        </tr>
+        </table>
