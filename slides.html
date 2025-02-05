@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Coordinate System</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        .axis {
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: black;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .axis.x {
+            width: 100%;
+            height: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .axis.z {
+            width: 3px;
+            height: 100%;
+            transform: rotate(45deg);
+            background: black;
+        }
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.6;
+        }
+        .box1 { background: red; top: 30px; left: 30px; z-index: 1; }
+        .box2 { background: green; top: 60px; left: 60px; z-index: 2; }
+        .box3 { background: blue; top: 90px; left: 90px; z-index: 3; }
+        .box4 { background: purple; top: 120px; left: 120px; z-index: 4; }
+        .label {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .label.y { top: -20px; left: 50%; transform: translateX(-50%); }
+        .label.x { bottom: -20px; left: 50%; transform: translateX(-50%); }
+        .label.z { bottom: -20px; right: -20px; }
+        .label.lower { left: -80px; top: 40px; }
+        .label.upper { right: -120px; bottom: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="axis y"></div>
+        <div class="axis x"></div>
+        <div class="axis z"></div>
+         -->
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        
+        <!-- <div class="label y">Y Axis</div>
+        <div class="label x">X Axis</div>
+        <div class="label z">Z Axis</div>
+        <div class="label lower">Lower z-axis is at bottom of stack</div>
+        <div class="label upper">Greater z-axis is at top of stack</div> -->
+    </div>
+</body>
+</html>
