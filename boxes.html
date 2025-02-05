@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        body {
+            background-color: #e6a87d;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: inherit;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            margin-top: 150px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+        .box:nth-child(1) { background-color: gray; }
+        .box:nth-child(2) { background-color: yellow; }
+        .box:nth-child(3) { background-color: white; }
+        .box:nth-child(4) { background-color: red; }
+        .box:nth-child(5) { background-color: green; }
+        .box:nth-child(6) { background-color: blue; }
+        .box:nth-child(7) { background-color: cyan; }
+        .box:nth-child(8) { background-color: lightgreen; }
+        .box:nth-child(9) { background-color: rgb(199, 101, 118); }
+        .box:nth-child(odd) {
+            transform: translateY(-80px);
+        }
+        .box:nth-child(even) {
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Playing Around With The CSS Box Model</h1>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+        <div class="box">Box 6</div>
+        <div class="box">Box 7</div>
+        <div class="box">Box 8</div>
+        <div class="box">Box 9</div>
+    </div>
+</body>
+</html>
