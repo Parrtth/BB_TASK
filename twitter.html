@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+        }
+
+        .login-container {
+            background: #f1f1f1;
+            padding: 40px;
+            border-radius: 20px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #1DA1F2;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background: #e0e0e0;
+            font-size: 14px;
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #1DA1F2;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-btn:hover {
+            background: #0d8adf;
+        }
+
+        .footer {
+            font-size: 10px;
+            color: yellow;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.s5ujrdq0imWUFoiH0lWbNwHaHa&pid=Api&P=0&h=180" alt="Twitter Logo" class="logo">
+        <h2>TWITTER</h2>
+        <form>
+            <div class="input-group">
+                <label>EMAIL</label>
+                <input type="email" placeholder="example@test.com" required>
+            </div>
+            <div class="input-group">
+                <label>PASSWORD</label>
+                <input type="password" placeholder="Min 6 characters long" required>
+            </div>
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+        <div class="footer">MADE BY PRATHAM</div>
+    </div>
+</body>
+</html>
