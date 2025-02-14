@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Etsy Navbar Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .navbar {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #D84F2A; /* Etsy's brand color */
+            margin-left: 10px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+        }
+        .nav-category {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .nav-category {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">Etsy</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Search Bar -->
+        <div class="d-flex flex-grow-1 justify-content-center">
+            <input type="text" class="form-control search-bar" placeholder="Search for anything">
+            <i class="fas fa-search"></i>
+            <button class="btn btn-outline-secondary">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.15NxAXbTE1VWmuJDnhGmIQHaHa%26pid%3DApi&f=1&ipt=07f0fab7f9700bf867edbe95915ec90242b21cd7c46fc4800ce160a67ba7bcff&ipo=images" alt="icon-description" height="40" width="40">
+
+                
+            </button>
+        </div>
+
+        <!-- Right Side Icons -->
+        <div class="d-flex">
+            <a href="#" class="btn btn-outline-dark me-2">Sign in</a>
+            <a href="#" class="btn btn-outline-dark">
+                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FuRZC-KNKeU4y57U0LUB4wHaGK%26pid%3DApi&f=1&ipt=c0af61ea96e13391655dcf4f5135981ef613257bcaa8d5560ea20d963fcda49f&ipo=images" alt="icon-description" height="40" width="40">
+
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Categories Section -->
+<div class="container text-center mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-auto nav-category">Jewelry & Accessories</div>
+        <div class="col-md-auto nav-category">Clothing & Shoes</div>
+        <div class="col-md-auto nav-category">Home & Living</div>
+        <div class="col-md-auto nav-category">Wedding & Party</div>
+        <div class="col-md-auto nav-category">Toys & Entertainment</div>
+        <div class="col-md-auto nav-category">Art & Collectibles</div>
+        <div class="col-md-auto nav-category">Craft Supplies & Tools</div>
+        <div class="col-md-auto nav-category">Vintage</div>
+    </div>
+</div>
+
+</body>
+</html>
