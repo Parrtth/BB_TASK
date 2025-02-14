@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container Table */
+.container-table {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid red;
+    border-collapse: collapse;
+}
+
+.container-table td {
+    padding: 10px;
+}
+
+/* Nested Tables */
+.nested-table {
+    width: 100%;
+    border: 2px solid blue;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.nested-table th, 
+.nested-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* List Styling */
+.nested-table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nested-table li {
+    padding: 5px;
+    text-align: left;
+}
+
+/* HTML Logo Table */
+.html-logo {
+    background-color: #000;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
