@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NestedTables</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        table, th, td {
+            border: 3px solid rgb(205, 65, 65);
+        }
+        .nested-table-1 {
+            border: 3px solid yellow;
+            
+            
+        }
+        .nested-table-2 {
+            border: 3px solid blue;
+        }
+        .nested-table-3 {
+            border: 3px solid gray;
+        }
+        .nested-table-4 {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <table class="nested-table-1">
+                    <h1>Nested Table 1</h1>
+                    <tr>
+                        <td>Our First Table</td>
+                        <td>Nested Within</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="nested-table-2">
+                    <h2>Nested Table 2</h2>
+                    <tr>
+                        <td>List Object 1</td>
+                        <td>List Object 2</td><br>
+
+                        <td>List Object 3</td><br>
+                    
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="nested-table-3">
+                    <h3>Nested Table 3</h3>
+                    <tr>
+                        <td>Nested Table</td>
+                        <td>Demo Continued</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="nested-table-4">
+                    <h4>Nested Table 4</h4>
+                    <tr>
+                        <td><img src="checked.png" alt="HTML" style="width:60px;height:60px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
