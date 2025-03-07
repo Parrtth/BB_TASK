@@ -1,0 +1,9 @@
+<button id="toggleButton">Toggle Paragraph</button>
+<p id="myParagraph">This is a paragraph.</p>
+
+<script>
+  document.getElementById("toggleButton").addEventListener("click", function() {
+    const paragraph = document.getElementById("myParagraph");
+    paragraph.style.display = (paragraph.style.display === "none") ? "block" : "none";
+  });
+</script>
