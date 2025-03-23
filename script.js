@@ -1,38 +1,40 @@
-<script>
-    // Sidebar Toggle
-    const sidebarToggle = document.querySelector('.sidebar-toggle'); // Add an element for toggling the sidebar
-    const sidebar = document.querySelector('.sidebar');
+const inputBox = document.getElementById("input-box");
+const listcontainer = document.getElementById("list-container");
 
-    sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active'); // Toggle the 'active' class for the sidebar
-    });
 
-    // Create Playlist Button
-    const createPlaylistBtn = document.querySelector('.create-playlist-btn'); // Add a button with this class
-    createPlaylistBtn.addEventListener('click', () => {
-        const playlistName = prompt('Enter Playlist Name:');
-        if (playlistName) {
-            const playlistContainer = document.querySelector('.playlist-container'); // Add an element to hold playlists
-            const newPlaylist = document.createElement('div');
-            newPlaylist.classList.add('playlist-item');
-            newPlaylist.innerText = playlistName;
-            playlistContainer.appendChild(newPlaylist);
-        }
-    
+function addTask(){
+     if(inputBox.value === ''){
+        alert("you must write something!");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listcontainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox.value = "";
+    savedata();
+}
 
-    // Music Card Interaction
-    const musicCards = document.querySelectorAll('.music-card'); // Add a class to your music cards
-    musicCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const songTitle = card.querySelector('.song-title').innerText; // Assuming each card has a '.song-title'
-            alert(`Playing: ${songTitle}`);
-        });
-    });
+listcontainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        savedata();
+    }
+    else if (e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        savedata();
+    }
 
-    // Language Switcher
-    const languageSwitcher = document.querySelector('.language-switcher'); // Assuming an element exists
-    languageSwitcher.addEventListener('change', (event) => {
-        const selectedLanguage = event.target.value;
-        alert(`Language changed to: ${selectedLanguage}`);
-    });
-</script>
+}, false);
+
+function savedata(){
+    localStorage.setItem("data", listcontainer.innerHTML);
+
+}
+function showTask(){
+    listcontainer.innerHTML = localStorage.getItem("data");
+}
+showTask(); 
