@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSavvy Tax Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .invoice-card {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      background: #00a9b7;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .sub-header {
+      text-align: center;
+      color: #f44336;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .invoice-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .invoice-section {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      border-top: 1px dashed #ccc;
+      padding-top: 20px;
+    }
+
+    .column {
+      width: 48%;
+    }
+
+    .column h3 {
+      color: #00a9b7;
+      margin-bottom: 5px;
+    }
+
+    .info {
+      margin-bottom: 10px;
+    }
+
+    .info label {
+      font-weight: bold;
+    }
+
+    .footer-info {
+      margin-top: 20px;
+    }
+
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    .product-table th,
+    .product-table td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .product-table th {
+      background-color: #00a9b7;
+      color: white;
+    }
+
+    .product-table td:first-child,
+    .product-table th:first-child {
+      color: #00a9b7;
+      font-weight: bold;
+    }
+
+    .summary-section {
+      margin-top: 10px;
+      border-top: 1px solid #000;
+      padding-top: 10px;
+    }
+
+    .summary-section div {
+      margin: 4px 0;
+    }
+
+    .invoice-total {
+      text-align: right;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .footer-bar {
+      background-color: #00a9b7;
+      height: 8px;
+      margin-top: 40px;
+    }
+
+    .footer-text {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice-card">
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Croma_logo.svg/2560px-Croma_logo.svg.png" alt="Croma Logo" height="50"/>
+      <div>BRIGHTER EVERY DAY!</div>
+    </div>
+
+    <div class="sub-header">INFINITI RETAIL LIMITED (Trading as ShopSavvy)</div>
+    <div class="invoice-title">TAX INVOICE</div>
+
+    <div class="invoice-section">
+      <div class="column">
+        <div class="info"><label>Invoice No:</label> INV00123</div>
+        <div class="info"><label>Date and Time:</label> 2025-04-17 10:45 AM</div>
+        <div class="info"><label>Order ID:</label> SS123456789</div>
+
+        <h3>Customer Billing Address</h3>
+        <div class="info">
+          John Doe<br>
+          Mob: 9876543210<br>
+          123 Tech Park Avenue<br>
+          Vadodara, Gujarat - 390001<br>
+          India
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>Bill from Location:</h3>
+        <div class="info">
+          ShopSavvy Warehouse<br>
+          G-3, Ananta Stallion, Gotri - Sevasi Rd<br>
+          Vadodara, Gujarat 391101
+        </div>
+       
+
+      
+      </div>
+    </div>
+
+   
+
+    <h3 style="background-color:#00a9b7; color:white; padding:10px;">Products</h3>
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Item Code</th>
+          <th>Item Description</th>
+          <th>QTY./NOS</th>
+          <th>Net Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Logitech Wireless Mouse</td>
+          <td>1</td>
+          <td>₹1,200.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>HP USB Keyboard</td>
+          <td>1</td>
+          <td>₹900.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-section">
+     
+      <div><strong>Shipping Charges:</strong> ₹0.00</div>
+      <div><strong>Wrapping Charges:</strong> ₹0.00</div>
+      <div><strong>Tata Medical Donation:</strong> ₹0.00</div>
+      <div><strong>Payment Mode:</strong> Credit Card</div>
+      <div class="invoice-total">Invoice Value: INR ₹2,100.00</div>
+    </div>
+
+    <div class="footer-bar"></div>
+    <div class="footer-text">
+      Copyright © 2025 ShopSavvy.<br>
+      GST levied at applicable rates. Covered under reverse charge: No.
+    </div>
+  </div>
+</body>
+</html>
