@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical Appointment Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e9f5ff;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #007acc;
+      color: #fff;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #005eaa;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Book a Medical Appointment</h2>
+    <form id="appointmentForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" required />
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" required />
+
+      <label for="service">Select Service</label>
+      <select id="service" required>
+        <option value="">-- Select --</option>
+        <option value="General Consultation">General Consultation - ₹500</option>
+        <option value="Blood Test">Blood Test - ₹800</option>
+        <option value="COVID-19 Test">COVID-19 Test - ₹1200</option>
+      </select>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" rows="4"></textarea>
+
+      <button type="button" onclick="makePayment()">Pay & Book Appointment</button>
+    </form>
+  </div>
+
+  <!-- Razorpay Script -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    var options = {
+    key: "rzp_test_ABC123XYZ456", // ✅ Replace with your actual test key
+    amount: 50000, // amount in paise = ₹500
+    currency: "INR",
+    name: "MediCare Clinic",
+    description: "Consultation Payment",
+    handler: function (response) {
+      alert("Payment Successful! ID: " + response.razorpay_payment_id);
+    },
+    prefill: {
+      name: "Your Name",
+      email: "you@example.com",
+      contact: "9876543210"
+    }
+  };
+  
+  var rzp = new Razorpay(options);
+  rzp.open();
+  
+    function makePayment() {
+      const service = document.getElementById("service").value;
+      let amount = 0;
+
+      switch (service) {
+        case "General Consultation": amount = 50000; break;
+        case "Blood Test": amount = 80000; break;
+        case "COVID-19 Test": amount = 120000; break;
+        default: alert("Please select a service"); return;
+      }
+
+      const options = {
+        key: "rzp_test_ABC123XYZ456", // Replace with your Razorpay Key
+        amount: amount,
+        currency: "INR",
+        name: "MediCare Clinic",
+        description: service,
+        handler: function (response) {
+          alert("Payment successful! ID: " + response.razorpay_payment_id);
+          document.getElementById("appointmentForm").reset();
+        },
+        prefill: {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          contact: document.getElementById("phone").value
+        },
+        theme: {
+          color: "#007acc"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+  </script>
+</body>
+</html>
